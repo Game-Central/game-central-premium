@@ -27,6 +27,12 @@
 .g-signin2 > div{
   margin: 0 auto;
 }
+      .denied {
+        border-radius: 15px;
+        text-align: center;
+        background-color: red;
+        opacity: 0.5;
+      }
     </style>
     <meta name="google-signin-client_id" content="1085282736943-psnbug1st5dai1mqpi0rlrikncbtreh9.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -58,18 +64,20 @@
         document.getElementById("text").innerHTML = "Bad email";
         showemail();
       }
+      function hideElements() {
+        document.getElementById("denied").style.display = "none";
+      }
       
-      function showemail() {
-        const emailelement = document.getElementById("email");
-        emailelement.innerHTML = String(useremail);
+      function onload() {
+        hideElements();
       }
     </script>
   </head>
-  <body onload="showemail()">
+  <body onload="onload()">
     <div class="center">
-      <a >Please Sign Into An Account</a>
+      <h2>Please Sign Into Your Google Account</h2>
       <br>
-      <a id="text" ></a>
+      <div id="denied" ><a>Access Denied</a></div>
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
       <a href="#" onclick="signOut();" >Sign out</a>
     </div>
