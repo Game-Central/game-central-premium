@@ -2,6 +2,7 @@
 <html>
   <head>
     <style>
+      .center {text-align: center;}
     </style>
     <meta name="google-signin-client_id" content="1085282736943-psnbug1st5dai1mqpi0rlrikncbtreh9.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -37,9 +38,9 @@
   <body onload="checkaccount()">
     <a align="center">Please Sign Into An Account</a>
     <br>
-    <a id="text" align="center"></a>
-    <a align="center"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
-    <a href="#" onclick="signOut();" align="center">Sign out</a>
+    <a id="text" class="center"></a>
+    <a class="center"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
+    <a href="#" onclick="signOut();" class="center">Sign out</a>
     <script>
       function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
