@@ -5,25 +5,24 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
       function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      }
     </script>
     <script>
-      var profile = googleUser.getBasicProfile();
-      if (profile.getEmail() === schillingnathan08@gmail.com) {
-  document.getElementById("text").innerHTML = "Good email";
-}     else {
-document.getElementById("text").innerHTML = "Bad email";
-}
+      function checkaccount() {
+        var profile = googleUser.getBasicProfile();
+        if (profile.getEmail() === "schillingnathan08@gmail.com") {document.getElementById("text").innerHTML = "Good email";}     
+        else  {document.getElementById("text").innerHTML = "Bad email";}
+      }
     </script>
   </head>
   <body>
     <a id="text">hi</a>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    
+    <button onclick=checkaccount()">click</button>
   </body>
 </html>
