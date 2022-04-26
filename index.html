@@ -53,10 +53,13 @@
     <script>
       function acceptedaccount() {
         document.getElementById("text").innerHTML = "Good email";
+        showemail();
       }
       function deniedaccount() {
         document.getElementById("text").innerHTML = "Bad email";
+        showemail();
       }
+      
       function showemail() {
         document.getElementById("email").innerHTML = useremail;
       }
