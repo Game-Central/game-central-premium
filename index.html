@@ -30,9 +30,8 @@
       div.denied {
         border-radius: 15px;
         text-align: center;
-        background-color: red;
+        background-color: 255,0,0;
         opacity: 0.25;
-        display: none;
       }
     </style>
     <meta name="google-signin-client_id" content="1085282736943-psnbug1st5dai1mqpi0rlrikncbtreh9.apps.googleusercontent.com">
@@ -66,6 +65,8 @@
         document.getElementById("denied").style.display = "block";
       }
       function hideElements() {
+        document.getElementById("denied").style.display = "none";
+
       }
       
       function onload() {
@@ -77,7 +78,7 @@
     <div class="center">
       <h2>Please Sign Into Your Google Account</h2>
       <br>
-      <div id="denied" ><a>Access Denied</a></div>
+      <div id="denied" ><a><strong>Access Denied</strong></a></div>
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
       <a href="#" onclick="signOut();" >Sign out</a>
     </div>
