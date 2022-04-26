@@ -62,13 +62,18 @@
 
       function acceptedaccount() {
         document.getElementById("iframe").style.display = "block";
+        document.getElementById("signouttop").style.display = "block";
+
       }
       function deniedaccount() {
         document.getElementById("denied").style.display = "block";
+        document.getElementById("signouttop").style.display = "none";
       }
       function hideElements() {
         document.getElementById("denied").style.display = "none";
         document.getElementById("iframe").style.display = "none";
+        document.getElementById("signouttop").style.display = "none";
+
       }
       
       function onload() {
@@ -77,6 +82,7 @@
     </script>
   </head>
   <body onload="onload()">
+    <a><button href="#" onclick="signOut();" id="signouttop" >Sign out</button></a>
     <div class="center">
       <h2>Please Sign Into Your Google Account</h2>
       <br>
@@ -85,7 +91,7 @@
       <a href="#" onclick="signOut();" >Sign out</a>
     </div>
     <a id="email"> </a>
-    <iframe src="home.html" id="iframe" style="position:fixed; top:0; left:0; bottom:10; right:0; width:100%; height:95%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+    <iframe src="home.html" id="iframe" style="position:fixed; top:10; left:0; bottom:0; right:0; width:100%; height:97%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
     </iframe>
     <script>
       function signOut() {
@@ -93,6 +99,7 @@
         auth2.signOut().then(function () {
         console.log('User signed out.');
         });
+        document.getElementById("iframe").style.display = "none";
       }
     </script>
   </body>
