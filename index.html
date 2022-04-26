@@ -35,11 +35,11 @@
     </script>
   </head>
   <body onload="checkaccount()">
-    <a>Please Sign Into An Account</a>
+    <a align="center">Please Sign Into An Account</a>
     <br>
-    <a id="text"></a>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <a href="#" onclick="signOut();">Sign out</a>
+    <a id="text" align="center"></a>
+    <a align="center"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
+    <a href="#" onclick="signOut();" align="center">Sign out</a>
     <script>
       function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
