@@ -10,24 +10,24 @@
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        var useremail = profile.getEmail()
-        alert(useremail)
+        var useremail = profile.getEmail();
+        alert(useremail);
         if (useremail === 'schillingnathan08@gmail.com') {
           acceptedaccount();
         }  
         else {
           deniedaccount();
         }
+      }
     </script>
     <script>
-      }
       function acceptedaccount() {
         alert("worked");
         document.getElementById("text").innerHTML = "Good email";}     
-      }
+      };
       function deniedaccount() {
         document.getElementById("text").innerHTML = "Bad email";}
-      }
+      };
       function checkemail() {
         alert(useremail)
       }
