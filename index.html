@@ -32,6 +32,7 @@
         text-align: center;
         background-color: red;
         opacity: 0.25;
+        display: none;
       }
     </style>
     <meta name="google-signin-client_id" content="1085282736943-psnbug1st5dai1mqpi0rlrikncbtreh9.apps.googleusercontent.com">
@@ -62,10 +63,9 @@
       }
       function deniedaccount() {
         document.getElementById("text").innerHTML = "Bad email";
-        showemail();
+        document.getElementById("denied").style.display = "block";
       }
       function hideElements() {
-        document.getElementById("denied").style.display = "none";
       }
       
       function onload() {
