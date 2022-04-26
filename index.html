@@ -56,6 +56,9 @@
       function deniedaccount() {
         document.getElementById("text").innerHTML = "Bad email";
       }
+      function showemail() {
+        document.getElementById("email").innerHTML = useremail;
+      }
     </script>
   </head>
   <body onload="checkaccount()">
@@ -66,6 +69,7 @@
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
       <a href="#" onclick="signOut();" >Sign out</a>
     </div>
+    <a id="email"> </a>
     <script>
       function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
