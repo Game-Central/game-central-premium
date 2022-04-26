@@ -10,7 +10,9 @@
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        if (profile.getEmail() === "schillingnathan08@gmail.com") {
+        var useremail = profile.getEmail()
+        alert(useremail)
+        if (useremail === "schillingnathan08@gmail.com") {
           acceptedaccount();
         }  
         else {
@@ -29,7 +31,7 @@
     </script>
   </head>
   <body>
-    <a id="text">hi</a>
+    <a id="text">hii</a>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <a href="#" onclick="signOut();">Sign out</a>
     <script>
