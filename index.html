@@ -28,10 +28,13 @@
       function deniedaccount() {
         document.getElementById("text").innerHTML = "Bad email";}
       }
+      function checkemail() {
+        alert(useremail)
+      }
     </script>
   </head>
-  <body>
-    <a id="text">hii</a>
+  <body onload="checkemail()">
+    <a id="text">hi</a>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <a href="#" onclick="signOut();">Sign out</a>
     <script>
