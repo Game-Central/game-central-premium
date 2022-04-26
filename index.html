@@ -26,12 +26,12 @@
       function deniedaccount() {
         document.getElementById("text").innerHTML = "Bad email";}
       };
-      function checkemail() {
+      function checkaccount() {
         alert(useremail)
       }
     </script>
   </head>
-  <body onload="checkemail()">
+  <body onload="checkaccount()">
     <a id="text">hi</a>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <a href="#" onclick="signOut();">Sign out</a>
