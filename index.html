@@ -62,7 +62,9 @@
       }
       
       function showemail() {
-        document.getElementById("email").innerHTML = useremailconst;
+        const emailelement = document.getElementById("email")
+        const newtext = useremail;
+        emailelement.innerHTML = newtext;
       }
     </script>
   </head>
