@@ -93,7 +93,14 @@
         document.getElementById("denied").style.display = "none";
         document.getElementById("iframe").style.display = "none";
         document.getElementById("signouttop").style.display = "none";
-
+      }
+      
+      function detectkeys() {
+        document.addEventListener("keypress", function(event) {
+          if (event.keyCode == 77) {
+            alert('hi.');
+          }
+        });
       }
       
       function onload() {
