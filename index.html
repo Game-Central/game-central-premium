@@ -95,15 +95,16 @@
         document.getElementById("signouttop").style.display = "none";
       }
       
+      function onload() {
+        hideElements();
+      }
+    </script>
+    <script>
       document.addEventListener("keypress", function(event) {
         if (event.keyCode == 77) {
           alert('hi.');
         }
       });
-      
-      function onload() {
-        hideElements();
-      }
     </script>
   </head>
   <body onload="onload()">
